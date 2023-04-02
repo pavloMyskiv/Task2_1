@@ -9,16 +9,16 @@ const getRandonNum = () => {
 };
 
 const getRandomColor = () => {
-  const r = getRandonNum(),
-    g = getRandonNum(),
-    b = getRandonNum();
+  const r = getRandonNum();
+  const g = getRandonNum();
+  const b = getRandonNum();
 
   return 'rgb(' + r + ',' + g + ',' + b + ')';
 };
 
 const setRandomColor = (block, text) => {
   const color = getRandomColor();
-  text.textContent = `${color}`;
+  text.textContent = color;
   block.style.backgroundColor = color;
 };
 
