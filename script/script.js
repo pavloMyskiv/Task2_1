@@ -4,16 +4,20 @@ const button = document.getElementById('button');
 const span = document.querySelector('span');
 const wrapper = document.getElementById('wrapper');
 
+const getRandonNum = () => {
+  return Math.floor(Math.random() * 256);
+};
+
 const getRandomColor = () => {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
+  const r = getRandonNum(),
+    g = getRandonNum(),
+    b = getRandonNum();
 
   return 'rgb(' + r + ',' + g + ',' + b + ')';
 };
 
 const setRandomColor = (block, text) => {
-  let color = getRandomColor();
+  const color = getRandomColor();
   text.textContent = `${color}`;
   block.style.backgroundColor = color;
 };
